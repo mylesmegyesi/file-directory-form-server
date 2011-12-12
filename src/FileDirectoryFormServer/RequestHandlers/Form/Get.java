@@ -43,7 +43,7 @@ public class Get implements RequestHandler {
     public String getForm(List<String> fields) {
         StringBuilder builder = new StringBuilder();
         builder.append(String.format("<form name=\"input\" action=\"/form\" method=\"POST\">"));
-        this.getHtmlForFields(fields);
+        builder.append(this.getHtmlForFields(fields));
         builder.append("<input type=\"submit\" value=\"Submit\" />");
         builder.append("</form>");
         return builder.toString();
